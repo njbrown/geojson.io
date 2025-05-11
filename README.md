@@ -26,8 +26,9 @@ Full API documentation can be found in [API.md](API.md).
 ## Development
 
 1. Clone this repository
-2. Install dependencies
-3. Run `npm start`
+2. Run `find . -type f -name "*.js" -exec dos2unix {} \;` to use unix line endings
+3. Install dependencies
+4. Run `npm start`
 
 `npm start` uses `concurrently` to run `live-server` which will serve the project directory in your browser and listen for changes, `rollup` which will build the js and css bundles, and `npx tailwindcss` which builds `css/tailwind_dist.css` (including only the tailwind rules needed in the project)
 
@@ -37,7 +38,7 @@ Full API documentation can be found in [API.md](API.md).
 
 `npm run build` will create minified bundles in `/dist`. You can try out the production build with `npm run serve` which will run live-server.
 
-To deploy to github pages, use `npm run deploy`.  This will run the deploy script in `deploy.sh`, which creates a new orphan branch from the current branch, runs a production build, and force pushes to the `gh-pages` branch.
+To deploy to github pages, use `npm run deploy`. This will run the deploy script in `deploy.sh`, which creates a new orphan branch from the current branch, runs a production build, and force pushes to the `gh-pages` branch.
 
 ## License
 

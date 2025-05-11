@@ -44,5 +44,31 @@ module.exports = [
         }
       ]
     }
+  },
+  {
+    title: 'Google Maps',
+    style: {
+      name: 'google-maps',
+      version: 8,
+      glyphs: 'mapbox://fonts/mapbox/{fontstack}/{range}.pbf',
+      sources: {
+        'gm-tiles': {
+          type: 'raster',
+          tiles: ['https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}'],
+          tileSize: 256,
+          attribution:
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }
+      },
+      layers: [
+        {
+          id: 'gm-raster-layer',
+          type: 'raster',
+          source: 'gm-tiles',
+          minzoom: 0,
+          maxzoom: 22
+        }
+      ]
+    }
   }
 ];

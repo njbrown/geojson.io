@@ -40,7 +40,7 @@ export default {
     markdown(),
 
     css({
-      output: './dist/css/bundle.css',
+      output: 'bundle.css',
       minify: production
     }),
 
